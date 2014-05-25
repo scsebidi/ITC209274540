@@ -1,0 +1,18 @@
+<h1>Your Cart</h1>  <% @cart.each do |id, quantity| %>
+   <% v=books.find(id) %>
+<table>
+
+<tr>
+<td><%= v.id%></td>
+<td><%= v.name%></td>
+  <td><%= v.author_id %></td>  
+          <td><%=  v.genre_id %></td>
+          <td><%= number_to_currency v.price, :unit=> "R"%></td>
+</tr>
+  <%= @total += quantity*v.price%>
+  <%end%><tr>
+  <td colspan="4">Total:</td>
+<td><%= number_to_currency @total, :unit =>"R" %></td>
+  </tr>
+
+</table>

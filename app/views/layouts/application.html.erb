@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin</title>
+  <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css" />
+<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css" />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/books">i-sell</a>
+    </div>
+    <div class="collapse navbar-collapse"  align="left">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/books">Home</a></li>
+         <li class="active"><a href="/contacts">Contact us</a></li>
+          <li class="active"><a href="pages#index">About us</a></li>
+         <li class="active"><a href="cart#index">Your Cart</a></li>
+          <li class="active"><a href="/admin">Admin Site</a></li>
+          <li class=><a href="/customers/new">Register</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+  <%= yield %>
+</div>
+
+<footer>
+  <div class="container">
+    by scsebidi
+  </div>
+</footer>
+<script src="//railsgirls.com/assets/bootstrap.js"></script>
+
+</body>
+</html>

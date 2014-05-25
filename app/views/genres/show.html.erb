@@ -1,0 +1,17 @@
+<h3>Genres</h3>
+<table>
+	<tr><th>Id</th>
+		<th>Name</th>
+		<th>Created at</th>
+		<th>Updated at</th>
+		
+	</tr>
+	<tr>
+     <% @genres.each do |v|%>
+         <td><%= link_to v.id, books_path%></td>
+         <td><%= v.name%></td>
+         <td><%= v.created_at%></td>
+            <td><%= v.updated_at%></td>
+</tr>
+<%end%>
+</table>

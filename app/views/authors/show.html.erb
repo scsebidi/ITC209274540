@@ -1,0 +1,15 @@
+<h3>Authors</h3>
+<table>
+	<tr><th>Id</th>
+		<th>Name</th>
+		<th>Surname</th>
+		
+	</tr>
+	<tr>
+     <% @authors.each do |v|%>
+         <td><%= link_to v.id, books_path%></td>
+         <td><%= v.first_name%></td>
+         <td><%= v.last_name%></td>
+</tr>
+<%end%>
+</table>
